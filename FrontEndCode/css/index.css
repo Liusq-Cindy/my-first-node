@@ -82,7 +82,7 @@ img {
 
 /* 头部 */
 .header nav {
-  background: #0C3F74 !important;
+  background: #002e57 !important;
 }
 .banner {
   background: url(./../images/common-banner-slider.jpg);
@@ -111,7 +111,7 @@ img {
   margin-top: 30px;
 }
 .copyright {
-  background: #1360b0;
+  background: #326d85;
   color: #fff;
   padding: 20px 0 0.1px;
 }
