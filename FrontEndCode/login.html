@@ -121,7 +121,7 @@
           alert("请输入少于 20 位的密码");
           $("#userPassword").focus();
         } else {
-
+          // 请求登陆接口，传递数据，如果成功则存储登陆信息，跳转至留言面板，否则显示错误信息
           $.ajax({
             url: "http://localhost:8888/login",
             type: 'post',
