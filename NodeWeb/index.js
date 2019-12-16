@@ -1,4 +1,4 @@
-// 附：自定义高亮设置 快捷键ctrl+shift+p --->  setting首选项 ---- > 自定义todohighlight.keywords
+// 附：自定义高亮设置 快捷键command+shift+p --->  setting首选项 ---- > 自定义todohighlight.keywords
 // LOOK: 1.连接mysql,引入http、url、qs等模块
 // 连接 MySQL：先安装 npm i mysql -D
 var mysql = require('mysql');
