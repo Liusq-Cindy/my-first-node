@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="keywords" content="前端-node.js">
+  <meta http-equiv="description" content="node连接mysql小实践">
+  <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>node连接mysql--首页</title>
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="./css/bootstrap.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="row aside">
+      <div class="col-md-10 content">
+        <h4 class="content-nav">
+          <span class="text-primary float-left">
+            <img src="./images/common-nav-btn.png" alt="小导航图标">&nbsp;首页介绍</span>
+          <span class="float-right">当前位置：node连接mysql > 首页</span>
+        </h4>
+        <div class="row content-text">
+          <div class="col-md-8">
+            <p>1、安装mysql及数据库管理工具navicat</p>
+            <p>2、启动mysql</p>
+            <p>3、设计数据表结构</p>
+            <p>4、编写前端静态页面</p>
+            <p>5、编写node代码，连接数据库，实现注册登陆及留言板功能</p>
+          </div>
+          <div class="col-md-4">
+            <img class="img-fluid" src="./images/index-content1.jpg" alt="内容图片1">
+          </div>
+        </div>
+        <p>这里根据node的：<a target="_blank" class="text-warning" href="https://github.com/LiangJunrong/document-library/blob/master/other-library/Node/Node-base.md">基础项目教程</a>，基于node的几个基础模块，连接mysql，实现了用户注册登陆及留言的基本功能。仅仅是一次简单的尝试，如有不足，欢迎指教。</p>
+      </div>
+    </div>
+  </div>
+    <div class="lll">
+    <iframe src="http://0.0.0.0:8077/survey/static/UrUZja" frameborder="1" class="if-style" scrolling="no"></iframe>
+  </div>
+</body>
+<style>
+  .lll {
+    position: relative;
+    /* border: 2px solid rgb(28, 39, 196); */
+    width: 1300px;
+    height: 650px;
+  }
+  .if-style {
+    position: absolute;
+    width: 1300px;
+    height: 650px;
+    border: 2px solid seagreen;
+  }
+</style>
+<script>
+  //回调函数
+function receiveMessageFromIndex ( event ) {
+  console.log( 'receiveMessageFromIndex', event )
+  var lsq = document.getElementsByClassName('if-style')[0];
+  var hh = +event.data + 20;
+  lsq.style.height = hh+'px';
+}
+
+//监听message事件
+window.addEventListener("message", receiveMessageFromIndex, false);
+</script>
+
+</html>
