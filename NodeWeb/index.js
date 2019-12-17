@@ -34,10 +34,8 @@ http.createServer(function (req, res) {
    // LOOK: 3、根据请求方法，连接数据库，处理数据
    // 接口 POST 形式
   if (req.method == "POST") {
-    console.log("\n【POST 形式】");
     // 获取前端发来的路由地址
     let pathName = req.url;
-    console.log("\n接口路径为：" + pathName);
     // 接收发送过来的参数
     let tempResult = "";
     // MAIN:数据接入中，监听数据接入：addListener = function(type, listener)，type为data传输中，end接受完成
@@ -260,7 +258,6 @@ http.createServer(function (req, res) {
           throw error1; 
         } else {
           let newRes = JSON.parse(JSON.stringify(response1));
-          console.log(newRes);
           // 返回数据
           res.write(JSON.stringify({
             code: "1",
